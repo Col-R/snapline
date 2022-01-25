@@ -1,4 +1,4 @@
-package com.cole.snapline;
+package com.dojo.snapline;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
