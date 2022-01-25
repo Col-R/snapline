@@ -31,3 +31,13 @@ build/
 
 ### VS Code ###
 .vscode/
+
+### dotenv ###
+.env
+
+### feature list ###
+.txt
+
+## sql models ###
+.mwb
+.bak
