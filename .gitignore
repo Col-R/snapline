@@ -35,8 +35,16 @@ build/
 ### dotenv ###
 .env
 
-### feature list ###
-.txt
+### Text ###
+*.doc
+*.docx
+*.log
+*.msg
+*.pages
+*.rtf
+*.txt
+*.wpd
+*.wp
 
 ## sql models ###
 .mwb
