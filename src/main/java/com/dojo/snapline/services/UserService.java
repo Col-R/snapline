@@ -29,4 +29,16 @@ public class UserService {
 		//save that user password and the user object to the database
 		return this.uRepo.save(user);
 	}
+	public boolean authenticateUser(String email, String password) {
+		// Query the user by email
+		User user = this.uRepo.findByEmail(email);
+		if(user == null) {
+			return false;
+		}
+		// step 2, check provided email against email in database
+		return BCrypt.checkpw(password, user.getPassword());
+	}
+	public User getUserByEmail(String email) {
+		return this.uRepo.findByEmail(email);
+	}
 }
