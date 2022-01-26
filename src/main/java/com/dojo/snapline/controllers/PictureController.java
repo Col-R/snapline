@@ -22,6 +22,6 @@ public class PictureController {
 		}
 		viewModel.addAttribute("user", this.uService.getOneUser((Long)session.getAttribute("user__id")));
 		viewModel.addAttribute("allAlbums", this.pService.getAllAlbums());
-		return "index.jsp";
+		return "dashboard.jsp";
 	}
 }

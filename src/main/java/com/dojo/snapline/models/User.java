@@ -53,8 +53,8 @@ public class User {
         this.updatedAt = new Date();
     }
 	
-//	@OneToMany(mappedBy = "owner", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
-//	private List <Picture> myPictures;
+	@OneToMany(mappedBy = "owner", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+	private List <Picture> myPictures;
 
 	public User() {
 	}
@@ -115,13 +115,13 @@ public class User {
 		this.confirmPassword = confirmPassword;
 	}
 
-//	public List<Picture> getMyPictures() {
-//		return myPictures;
-//	}
-//
-//	public void setMyPictures(List<Picture> myPictures) {
-//		this.myPictures = myPictures;
-//	}
+	public List<Picture> getMyPictures() {
+		return myPictures;
+	}
+
+	public void setMyPictures(List<Picture> myPictures) {
+		this.myPictures = myPictures;
+	}
 	public Date getCreatedAt() {
 		return createdAt;
 	}
