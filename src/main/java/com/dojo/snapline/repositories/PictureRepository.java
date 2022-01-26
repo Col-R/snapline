@@ -7,7 +7,7 @@ import org.springframework.stereotype.Repository;
 import com.dojo.snapline.models.Picture;
 
 @Repository
-public interface PictureRepository {
+public interface PictureRepository extends CrudRepository <Picture, Long>{
 	List<Picture> findAll();
 	List<Picture> findAllOrderByCreated_AtDesc();
 }
