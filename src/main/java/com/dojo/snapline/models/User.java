@@ -54,7 +54,7 @@ public class User {
     }
 	
 	@OneToMany(mappedBy = "owner", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
-	private List <Picture> myPictures;
+	private List<Picture> myPictures;
 
 	public User() {
 	}

@@ -35,7 +35,7 @@ public class LoginController {
 		}
 		User newUser = this.uService.registerUser(user);
 		session.setAttribute("user__id", newUser.getId());
-		return "redirect:/dashboard"; //this will redirect to whatever our login page is 
+		return "redirect:/"; //this will redirect to whatever our login page is 
 	}
 	@PostMapping("/login")
 	public String login(HttpSession session, @RequestParam("lemail") String email, @RequestParam("lpassword")String password, RedirectAttributes redirectAttr) {
@@ -45,7 +45,7 @@ public class LoginController {
 		}
 		User user = this.uService.getUserByEmail(email);
 		session.setAttribute("user__id", user.getId());
-		return "redirect:/dashboard";
+		return "redirect:/";
 	}
 	@GetMapping("/logout")
 	public String logout(HttpSession session) {
