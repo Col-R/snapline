@@ -48,6 +48,14 @@ public class Picture {
 
 	public Picture() {
 	}
+	
+	
+	
+	public Picture(String image_url, String description, User owner) {
+		this.image_url = image_url;
+		this.description = description;
+		this.owner = owner;
+	}
 	public Long getId() {
 		return id;
 	}
