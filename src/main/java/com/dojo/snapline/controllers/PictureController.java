@@ -9,7 +9,7 @@ import com.dojo.snapline.services.UserService;
 
 public class PictureController {
 	@Autowired
-	private PhotoService pService;
+	private PictureService pService;
 	@Autowired
 	private UserService uService;
 	@Autowired
