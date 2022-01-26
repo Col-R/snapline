@@ -25,13 +25,13 @@ public class LoginController {
 	
 	@GetMapping("/")
 	public String landing(@ModelAttribute("user")User user) {
-		return "index.jsp";
+		return "landing.jsp";
 	}
 	@PostMapping("/registerUser")
 	public String register (@Valid @ModelAttribute("user")User user, BindingResult result, HttpSession session) {
 		validator.validate(user,result);
 		if(result.hasErrors()) {
-			return "index.jsp";
+			return "landing.jsp";
 		}
 		User newUser = this.uService.registerUser(user);
 		session.setAttribute("user__id", newUser.getId());
