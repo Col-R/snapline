@@ -1,9 +1,0 @@
-Snapline Feature List - Marvin M Diaz & Cole Robinson
-
-Minimums:
-CRUD functions with users being able to log in, upload their photos to a public feed, make changes to their profile, and view other's photos.
-photos will have a description, a timestamp, and be sorted chronologically.
-
-Bonuses:
-Likes, for many to many. 
-Friends system, so user's feed is just limited to their friends.
