@@ -14,7 +14,7 @@ public interface PictureRepository extends CrudRepository <Picture, Long>{
 	List<Picture> findAll();
 	
 //	// all pictures ordered chronologically
+	
+	// known issue: the below is causing problems
 //	List<Picture> findAllOrderBycreatedAtDesc();
-//	// all pictures by user
-//	List<Picture> findAllByUser (User owner);
 }
