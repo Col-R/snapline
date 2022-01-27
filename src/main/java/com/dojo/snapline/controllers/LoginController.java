@@ -36,7 +36,7 @@ public class LoginController {
 		}
 		User newUser = this.uService.registerUser(user);
 		session.setAttribute("user__id", newUser.getId());
-		return "redirect:/dashboard";
+		return "redirect:/home";
 	}
 	@PostMapping("/login")
 	public String login(HttpSession session, @RequestParam("lemail") String email, @RequestParam("lpassword")String password, RedirectAttributes redirectAttr) {
@@ -46,16 +46,9 @@ public class LoginController {
 		}
 		User user = this.uService.getUserByEmail(email);
 		session.setAttribute("user__id", user.getId());
-		return "redirect:/dashboard";
+		return "redirect:/home";
 	}
-	@GetMapping("dashboard")
-	public String dashboard (Model viewModel, HttpSession session) {
-		if(session.getAttribute("user__id") == null) {
-			return "redirect:/";
-		}
-		viewModel.addAttribute("user", this.uService.getOneUser((Long)session.getAttribute("user__id")));
-		return "dashboard.jsp";
-	}
+
 	
 	
 	@GetMapping("/logout")
