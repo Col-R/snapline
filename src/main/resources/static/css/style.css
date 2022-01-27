@@ -1,0 +1,64 @@
+/*
+Website Palette:
+Granite Gray: #676767
+Gray: #808080
+White: #FFFFFF
+Cultured: #F5F5F5
+Chinese White: #E2E5DE
+Ash Gray: #B2BEB5
+
+*/
+/*All pages*/
+* {
+	font-family: 'M PLUS 1p', sans-serif;
+    padding: 0px;
+    margin: auto 0px;
+    text-decoration: none !important;
+}
+body {
+	background-color: #E2E5DE;
+}
+
+/*Login Page Styles*/
+
+.submitButton {
+	box-shadow:inset 0px 1px 0px 0px #ffffff;
+	background:linear-gradient(to bottom, #ededed 5%, #dfdfdf 100%);
+	background-color:#ededed;
+	border-radius:6px;
+	border:1px solid #dcdcdc;
+	display:inline-block;
+	cursor:pointer;
+	color:#777777;
+	font-family:Arial;
+	font-size:15px;
+	font-weight:bold;
+	padding:6px 24px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #ffffff;
+}
+.submitButton:hover {
+	background:linear-gradient(to bottom, #dfdfdf 5%, #ededed 100%);
+	background-color:#dfdfdf;
+}
+.submitButt:active {
+	position:relative;
+	top:1px;
+}
+
+.register_login {
+    background-color: #B2BEB5;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    margin: 0.3em 0.5em 0 0.5em;
+    text-align: center;
+}
+.form_windows {
+    color: black;
+    background-color: #FFFFFF;
+    padding: 10px;
+    border-radius: 10px;
+}
+.form_style {
+    margin: 0;
+}
