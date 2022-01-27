@@ -49,7 +49,7 @@ public class Picture {
 	public Picture() {
 	}
 	
-	public Picture(String image_url, String description, User owner) {
+	public Picture(User owner, String image_url, String description) {
 		this.image_url = image_url;
 		this.description = description;
 		this.owner = owner;
