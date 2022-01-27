@@ -1,1 +1,1 @@
-Instagram-like photo sharing
+Photo sharing!
