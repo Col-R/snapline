@@ -20,37 +20,80 @@
 		<img src = "#" class = "img-fluid" alt ="login" id ="banner">
 	</div>
 	
-	<form:form action = "/registerUser" method = "POST" modelAttribute = "user">
-	<div class = "form-group">
-		<form:label path = "firstName">First Name</form:label>
-		<form:errors path = "firstName"/>
-		<form:input class = "form-control" path = "firstName"/>
+	<!-- Register Form -->
+	<div class = "row justify-content-evenly">
+		<div class = "col-6">
+			<form:form action = "/registerUser" method = "POST" modelAttribute = "user">
+			<h1 class = "register_login">Register Here</h1>
+			<div class = "row form_style">
+				<div class="col form_windows">
+              		<div class="row">
+                		<div class="row">
+                		<!--  	First Name on the left, last name on the right -->
+                  			<div class="col-6">
+						        <div class = "form-group mb-3">
+									<form:label path = "firstName">First Name</form:label>
+									<form:errors path = "firstName"/>
+									<form:input class = "form-control" path = "firstName"/>
+								</div>
+							</div>
+							<!--  	First Name on the left, last name on the right -->
+							<div class = "col-6">
+								<div class = "form-group">
+									<form:label path = "lastName">Last Name</form:label>
+									<form:errors path = "lastName"/>
+									<form:input class = "form-control" path = "lastName"/>
+								</div>
+							</div>
+						</div><!-- Row from line 31 end -->
+						
+						<div class = "row">
+							<div class = "col-8">
+								<div class = "form-group mb-3">
+									<form:label path = "email">Email</form:label>
+									<form:errors path = "email"/>
+									<form:input class = "form-control" type = "email" path = "email"/>
+								</div>
+							</div><!-- col from line 50 end -->
+						</div><!-- row from line 49 end -->
+						
+						<div class = "row">
+							<div class = "col-8">
+								<div class = "form-group mb-3">
+									<form:label path = "username">Username</form:label>
+									<form:errors path = "username"/>
+									<form:input class = "form-control" path = "username"/>
+								</div>
+							</div><!-- col from line 50 end -->
+						</div><!-- row from line 49 end -->
+						
+						<div class = "row">
+							<div class = "col-6">
+								<div class = "form-group mb-3">
+									<form:label path = "password">Password</form:label>
+									<form:errors path = "password"/>
+									<form:input class = "form-control" type="password" path = "password"/>
+								</div>
+							</div>
+							
+							<div class = "col-6">
+								<div class = "form-group mb-3">
+									<form:label path = "confirmPassword">Confirm Password</form:label>
+									<form:errors path = "confirmPassword"/>
+									<form:input class = "form-control" type="password" path = "confirmPassword"/>
+								</div>
+							</div>
+						</div><!-- row from line 70 end -->
+					</div><!-- row from line 30 end-->
+					<input type="submit" value="Submit" class="submitButton">
+		</div>
 	</div>
-	<div class = "form-group">
-		<form:label path = "lastName">Last Name</form:label>
-		<form:errors path = "lastName"/>
-		<form:input class = "form-control" path = "lastName"/>
-	</div>
-	<div class = "form-group">
-		<form:label path = "email">Email</form:label>
-		<form:errors path = "email"/>
-		<form:input class = "form-control" type = "email" path = "email"/>
-	</div>
-	<div class = "form-group">
-		<form:label path = "username">Username</form:label>
-		<form:errors path = "username"/>
-		<form:input class = "form-control" path = "username"/>
-	</div>
-	<div class = "form-group">
-		<form:label path = "password">Password</form:label>
-		<form:errors path = "password"/>
-		<form:input class = "form-control" type="password" path = "password"/>
-	</div>
-	<div class = "form-group">
-		<form:label path = "confirmPassword">Confirm Password</form:label>
-		<form:errors path = "confirmPassword"/>
-		<form:input class = "form-control" type="password" path = "confirmPassword"/>
-	</div>
+	
+
+
+
+
+
 	<input class ="btn btn-primary" type = "submit" value = "Submit"/>
 
 </form:form>
