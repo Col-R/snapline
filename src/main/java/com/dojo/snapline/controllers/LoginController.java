@@ -42,11 +42,11 @@ public class LoginController {
 	public String login(HttpSession session, @RequestParam("lemail") String email, @RequestParam("lpassword")String password, RedirectAttributes redirectAttr) {
 		if (!this.uService.authenticateUser(email, password)) {
 			redirectAttr.addFlashAttribute("loginError", "Invalid Credentials");
-			return "redirect:/dashboard";
+			return "redirect:/";
 		}
 		User user = this.uService.getUserByEmail(email);
 		session.setAttribute("user__id", user.getId());
-		return "redirect:/";
+		return "redirect:/dashboard";
 	}
 	@GetMapping("dashboard")
 	public String dashboard (Model viewModel, HttpSession session) {
