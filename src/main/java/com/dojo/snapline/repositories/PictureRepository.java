@@ -10,11 +10,5 @@ import com.dojo.snapline.models.User;
 
 @Repository
 public interface PictureRepository extends CrudRepository <Picture, Long>{
-//	// get all pictures
-	List<Picture> findAll();
-	
-//	// all pictures ordered chronologically
-	
-	// known issue: the below is causing problems
-//	List<Picture> findAllOrderBycreatedAtDesc();
+	List<Picture> findAllByUser(User user);
 }

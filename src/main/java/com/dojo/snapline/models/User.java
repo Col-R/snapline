@@ -53,7 +53,7 @@ public class User {
         this.updatedAt = new Date();
     }
 	
-	@OneToMany(mappedBy = "owner", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+	@OneToMany(mappedBy = "user", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
 	private List<Picture> myPictures;
 
 	public User() {

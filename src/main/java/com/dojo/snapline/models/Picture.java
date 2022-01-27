@@ -26,10 +26,7 @@ public class Picture {
 	private Long id;
 	private String image_url;
 	private String description;
-	
-	@ManyToOne(fetch=FetchType.LAZY)
-	@JoinColumn(name="user_id")
-	private User owner;
+
 	
 	@Column(updatable=false)
 	@DateTimeFormat(pattern="yyy-MM-DD HH:mm:ss")
@@ -45,13 +42,17 @@ public class Picture {
     protected void onUpdate(){
         this.updatedAt = new Date();
     }
-    
+	
+	@ManyToOne(fetch=FetchType.LAZY)
+	@JoinColumn(name="user_id")
+	private User user;
+	
 
 	
-	public Picture(User owner, String image_url, String description) {
+	public Picture(String image_url, String description, User user) {
 		this.image_url = image_url;
 		this.description = description;
-		this.owner = owner;
+		this.user = user;
 	}
 	
 	public Long getId() {
@@ -84,11 +85,12 @@ public class Picture {
 	public void setUpdatedAt(Date updatedAt) {
 		this.updatedAt = updatedAt;
 	}
-	public User getOwner() {
-		return owner;
+	public User getUser() {
+		return user;
 	}
-	public void setOwner(User owner) {
-		this.owner = owner;
+	public void setUser(User user) {
+		this.user = user;
 	}
+
 	
 }

@@ -14,13 +14,11 @@ public class PictureService {
 	@Autowired
 	private PictureRepository pRepo;
 	
-	public List <Picture> getAllPictures(){
-		return this.pRepo.findAll();
-	}
-	
-	
-	public void uploadPic(User owner, String url, String desc) {
-		Picture newPic = newPicture(owner, url, desc); // getting error here, unsure why.
+	public void uploadPic(User user, String url, String desc) {
+		Picture newPic = new Picture (url, desc, user);
 		this.pRepo.save(newPic);
+	}
+	public List<Picture> userPictures (User user){
+		return this.pRepo.findAllByUser(user);
 	}
 }
