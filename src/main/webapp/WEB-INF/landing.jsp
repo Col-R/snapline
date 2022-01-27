@@ -110,7 +110,7 @@
 								<label for "email">Password</label>
 								<input type = "password" name ="lpassword" class= "form-control">
         					</div>
-        					<input type="submit" value="Submit" class="submitButton">
+        					<input type="submit" value="Login" class="submitButton">
         				</div>
         			</div> <!-- row B end -->
         		</div>

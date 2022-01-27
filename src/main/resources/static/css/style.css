@@ -1,3 +1,20 @@
+/*
+Website Palette:
+Granite Gray: #676767
+Gray: #808080
+White: #FFFFFF
+Cultured: #F5F5F5
+Chinese White: #E2E5DE
+Ash Gray: #B2BEB5
+
+*/
+/*All pages*/
+* {
+    font-family: 'Montserrat', sans-serif;
+    padding: 0px;
+    margin: auto 0px;
+    text-decoration: none !important;
+}
 body {
 	background-color: #E2E5DE;
 }
@@ -31,7 +48,8 @@ body {
 
 .register_login {
     background-color: #B2BEB5;
-    border-radius: 10px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
     margin: 0.3em 0.5em 0 0.5em;
     text-align: center;
 }
