@@ -1,5 +1,5 @@
 body {
-	background-color: #D3D3D3;
+	background-color: #E2E5DE;
 }
 
 /*Login Page Styles*/
@@ -24,7 +24,23 @@ body {
 	background:linear-gradient(to bottom, #dfdfdf 5%, #ededed 100%);
 	background-color:#dfdfdf;
 }
-.submitButton:active {
+.submitButt:active {
 	position:relative;
 	top:1px;
+}
+
+.register_login {
+    background-color: #B2BEB5;
+    border-radius: 10px;
+    margin: 0.3em 0.5em 0 0.5em;
+    text-align: center;
+}
+.form_windows {
+    color: black;
+    background-color: #FFFFFF;
+    padding: 10px;
+    border-radius: 10px;
+}
+.form_style {
+    margin: 0;
 }

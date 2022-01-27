@@ -21,9 +21,10 @@
         <img src="https://placekitten.com/1000/280" class="img-fluid" alt="login" id="banner">
     </div>
 
-    <!-- Register Form -->
-    <div class="row justify-content-evenly">
+   
+    <div class="row justify-content-evenly"> <!-- row 1 -->
         <div class="col-6">
+         <!-- Register Form -->
             <form:form action="/registerUser" method="POST" modelAttribute="user">
                 <h1 class="register_login">Register Here</h1>
                 <div class="row form_style">
@@ -91,7 +92,36 @@
                 </div>
             </form:form>
         </div>
-    </div>
+        <div class = "col-6">
+        <!-- login form -->
+        <form action="/login" method = "POST">
+        <h1 class = "register_login">Login</h1>
+        <div class = "row form_style"> <!-- row A -->
+        	<div class = "col form_windows">
+        		<div class = "row">
+        			<div class = "row"> <!-- row B -->
+        				<div class = "col-8">
+        					<div class = "form-group mb-3">			
+								<span>${loginError }</span>
+								<label for "email">Email Address</label>
+								<input type = "email" name ="lemail" class= "form-control">
+        					</div>
+        					<div class = "form-group mb-3">	
+								<label for "email">Password</label>
+								<input type = "password" name ="lpassword" class= "form-control">
+        					</div>
+        					<input type="submit" value="Submit" class="submitButton">
+        				</div>
+        			</div> <!-- row B end -->
+        		</div>
+        		
+        	</div>
+        </div> <!-- end row A -->
+        
+   
+        
+        </div>
+    </div> <!-- end row 1 -->
 </div>
 
 
