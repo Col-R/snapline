@@ -15,6 +15,14 @@
 <title>SnapLine</title>
 </head>
 <body>
-<h1>Hi</h1>
+
+<div class = "container">
+	<div class = "row">
+	<h1>Couple of test c:outs to make sure data is getting here</h1>
+		<ul>
+			<li>Logged in username: <c:out value="${user.username}"></c:out>
+		</ul>
+	</div>
+</div>
 </body>
 </html>
