@@ -22,7 +22,7 @@
                 <div class="container-fluid">
                     <div>
                         <img src="https://placekitten.com/100/100" alt="site logo" id="logo">
-                        <span id="brand" class="navbar-brand">SnapLine</span>
+                        <span id="brand" class="navbar-brand">snapline.</span>
                     </div>
                     <a href="/dashboard">Home</a>
                     <a href="/bag/create">Upload a Snap</a>
