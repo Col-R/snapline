@@ -18,26 +18,24 @@
 <body>
 
 <div class = "container">
-        <div class="row"> <!-- row 1 navbar start-->
-            <nav class="navbar topnav">
-                <div class="container-fluid">
-                    <div>
-                        <img src="https://placekitten.com/100/100" alt="site logo" id="logo">
-                        <span id="brand" class="navbar-brand">snapline.</span>
-                    </div>
-                    <a href="/home">Home</a>
-                    <a href="/home/new">Upload a Snap</a>
-                    <a href="/logout">Log Out</a>
-                </div>
-            </nav>
-        </div> <!-- end row 1 navbar end-->
-        
-	<div class = "row"> <!--  row 2 -->
-	<h1>Dashboard</h1>
-		<ul>
-			<li>Logged in username: <c:out value="${user.username}"></c:out>
-		</ul>
-	</div> <!--  end row 2 -->
-</div> <!--  end container row -->
+	<div class="row"> <!-- row 1 navbar start-->
+	    <nav class="navbar topnav">
+	        <div class="container-fluid">
+	            <div>
+	                <img src="https://placekitten.com/100/100" alt="site logo" id="logo">
+	                <span id="brand" class="navbar-brand">snapline.</span>
+	            </div>
+	            <a href="/home">Home</a>
+                <a href="/home/new">Upload a Snap</a>
+                <a href="/logout">Log Out</a>
+	        </div>
+	    </nav>
+	</div> <!-- end row 1 navbar end-->
+	<div class = "row">
+		<h1>Upload page</h1>
+	</div>
+</div>
+
+ <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 </body>
 </html>

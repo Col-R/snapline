@@ -30,4 +30,13 @@ public class PictureController {
 		viewModel.addAttribute("user", this.uService.getOneUser((Long)session.getAttribute("user__id")));
 		return "dashboard.jsp";
 	}
+	
+	@GetMapping("/new") // upload page
+	public String addPicture (Model viewModel, HttpSession session) {
+		if(session.getAttribute("user__id") == null) {
+			return "redirect:/";
+		}
+		viewModel.addAttribute("user", this.uService.getOneUser((Long)session.getAttribute("user__id")));
+		return "upload.jsp";
+	}
 }
