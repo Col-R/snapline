@@ -37,6 +37,6 @@ public class PictureController {
 			return "redirect:/";
 		}
 		viewModel.addAttribute("user", this.uService.getOneUser((Long)session.getAttribute("user__id")));
-		return "upload.jsp";
+		return "newUpload.jsp";
 	}
 }
