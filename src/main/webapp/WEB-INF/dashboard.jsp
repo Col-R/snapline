@@ -17,12 +17,26 @@
 <body>
 
 <div class = "container">
-	<div class = "row">
-	<h1>Couple of test c:outs to make sure data is getting here</h1>
+        <div class="row"> <!-- row 1 -->
+            <nav class="navbar topnav">
+                <div class="container-fluid">
+                    <div>
+                        <img src="https://placekitten.com/100/100" alt="site logo" id="logo">
+                        <span id="brand" class="navbar-brand">SnapLine</span>
+                    </div>
+                    <a href="/dashboard">Home</a>
+                    <a href="/bag/create">Upload a Snap</a>
+                    <a href="/logout">Log Out</a>
+                </div>
+            </nav>
+        </div> <!-- end row 1 -->
+        
+	<div class = "row"> <!--  row 2 -->
+	<h1>Dashboard</h1>
 		<ul>
 			<li>Logged in username: <c:out value="${user.username}"></c:out>
 		</ul>
-	</div>
-</div>
+	</div> <!--  end row 2 -->
+</div> <!--  end container row -->
 </body>
 </html>
