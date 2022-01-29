@@ -29,7 +29,7 @@ public class PictureController {
 	@Autowired
 	private UserService uService;
 	
-	private static String UPLOADED_FOLDER = "src/main/resources/static/images";
+	private static String UPLOADED_FOLDER = "src/main/resources/static/images/";
 
 	@GetMapping("")
 	public String dashboard (Model viewModel, HttpSession session) {
@@ -65,6 +65,6 @@ public class PictureController {
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
-		return "redirect:/dashboard";
+		return "redirect:/home";
 	}
 }

@@ -35,8 +35,8 @@
 	<div class = "row">
 		<h2>Upload a snap</h2>
 		<form method = "POST" action = "/home/upload" enctype = "multipart/form-data">
-			<div class = "form-data">Select file: <input type="file" name="pic"></div>
-			<div class = "form-data"><input class = "form-control" type = "text">Add a caption!</div>
+			<div class = "form-data">Select file: <input type="file" name="image"></div>
+			<div class = "form-data"><input class = "form-control" name = "description" type = "text" placeholder="Image caption"></div>
 			<input type="submit" value="Upload" class="submitButton">
 		</form>
 	</div>
