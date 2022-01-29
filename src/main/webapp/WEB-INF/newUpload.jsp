@@ -33,7 +33,12 @@
 	    </nav>
 	</div> <!-- end row 1 navbar end-->
 	<div class = "row">
-		<h1>Upload page</h1>
+		<h2>Upload a snap</h2>
+		<form method = "POST" action = "/home/upload" enctype = "multipart/form-data">
+			<div class = "form-data">Select file: <input type="file" name="pic"></div>
+			<div class = "form-data"><input class = "form-control" type = "text">Add a caption!</div>
+			<input type="submit" value="Upload" class="submitButton">
+		</form>
 	</div>
 </div>
 
