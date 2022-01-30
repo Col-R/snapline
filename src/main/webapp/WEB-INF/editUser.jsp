@@ -19,6 +19,37 @@
 <title>SnapLine</title>
 </head>
 <body>
+    <div class="container">
+        <div class="row">
+            <form:form method="POST" action="/edit/${user.id}" modelAttribute="user">
+                <div class="col-6">
+                    <div class="form-group mb-3">
+                        <form:label path="firstName">First Name</form:label>
+                        <form:errors path="firstName" />
+                        <form:input class="form-control" path="firstName" />
+                    </div>
+                </div>
 
+                <div class="col-6">
+                    <div class="form-group">
+                        <form:label path="lastName">Last Name</form:label>
+                        <form:errors path="lastName" />
+                        <form:input class="form-control" path="lastName" />
+                    </div>
+                </div>
+
+
+                <div class="col-8">
+                    <div class="form-group mb-3">
+                        <form:label path="username">Username</form:label>
+                        <form:errors path="username" />
+                        <form:input class="form-control" path="username" />
+                    </div>
+                </div><!-- col from line 50 end -->
+
+
+            </form:form>
+        </div>
+    </div>
 </body>
 </html>
