@@ -21,6 +21,9 @@ public class UserService {
 	public User getOneUser(Long id) {
 		return this.uRepo.findById(id).orElse(null);
 	}
+	public User editUser(User user) {
+		return this.uRepo.save(user);
+	}
 	public User registerUser(User user) {
 		// generate the hash
 		String hash = BCrypt.hashpw(user.getPassword(), BCrypt.gensalt());
