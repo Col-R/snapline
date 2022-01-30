@@ -60,7 +60,7 @@
                     </div>
                 </div><!-- col from line 50 end -->
 
-
+<input type="submit" value="Save Changes" class="submitButton">
             </form:form>
         </div>
     </div>

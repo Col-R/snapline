@@ -32,6 +32,7 @@
                     </div>
                     <a href="/home">Home</a>
                     <a href="/home/new">Upload a Snap</a>
+                    <a href="/edit/${user.id}">Edit Profile</a>
                     <a href="/logout">Log Out</a>
                 </div>
             </nav>
