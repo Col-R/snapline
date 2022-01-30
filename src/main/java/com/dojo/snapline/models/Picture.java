@@ -54,7 +54,10 @@ public class Picture {
 		this.description = description;
 		this.user = user;
 	}
-	
+
+	public Picture() {
+		
+	}
 	public Long getId() {
 		return id;
 	}

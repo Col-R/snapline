@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.util.List;
 
 import javax.servlet.http.HttpSession;
 
@@ -37,6 +38,18 @@ public class PictureController {
 			return "redirect:/";
 		}
 		viewModel.addAttribute("user", this.uService.getOneUser((Long)session.getAttribute("user__id")));
+		
+		User user = uService.getOneUser((Long)session.getAttribute("user__id"));
+		viewModel.addAttribute("user", user);
+//		viewModel.addAttribute("allUsers", this.uService.getAllUsers());
+		
+		
+		List<User> users = uService.getAllUsers();
+		viewModel.addAttribute("users", users);
+		
+		viewModel.addAttribute("pictures", this.pService.userPictures(user));
+		
+		
 		return "dashboard.jsp";
 	}
 	
@@ -67,4 +80,9 @@ public class PictureController {
 		}
 		return "redirect:/home";
 	}
+	
+
+	
+	
+	
 }
