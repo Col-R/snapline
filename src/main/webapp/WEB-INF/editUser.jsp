@@ -34,6 +34,7 @@
             </nav>
         </div> <!-- end row 1 navbar end-->
         <div class="row">
+        
             <form:form method="POST" action="/edit/${user.id}" modelAttribute="user">
                 <div class="col-6">
                     <div class="form-group mb-3">
