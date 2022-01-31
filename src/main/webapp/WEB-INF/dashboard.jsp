@@ -27,7 +27,7 @@
             <nav class="navbar topnav">
                 <div class="container-fluid">
                     <div>
-                        <img src="https://placekitten.com/100/100" alt="site logo" id="logo">
+                        <img src="https://img.icons8.com/ios/50/000000/apple-camera.png" alt="site logo" id="logo">
                         <span id="brand" class="navbar-brand">snapline</span>
                     </div>
                     <a href="/home">Home</a>

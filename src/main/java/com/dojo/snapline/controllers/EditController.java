@@ -1,6 +1,7 @@
 package com.dojo.snapline.controllers;
 
 
+import javax.servlet.http.HttpSession;
 import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -23,8 +24,11 @@ public class EditController {
 	private UserService uService;
 	
 	@GetMapping("edit/{id}")
-	public String editUser(@PathVariable("id")Long id, @ModelAttribute("user")User user, Model viewModel) {
+	public String editUser(@PathVariable("id")Long id, @ModelAttribute("user")User user, Model viewModel, HttpSession session) {
 		viewModel.addAttribute("user", this.uService.getOneUser(id));
+		if(session.getAttribute("user__id") != id) {
+			return "redirect:/";
+		}
 		return "editUser.jsp";
 	}
 	
