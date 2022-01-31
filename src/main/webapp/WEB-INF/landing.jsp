@@ -20,8 +20,7 @@
 <body>
 <div class="container">
     <div class="row">
-    	<!-- placeholder img, was thinking we could do a camera or something -->
-        <img src="https://placekitten.com/2000/500" class="img-fluid" alt="login" id="banner">
+        <img src="${pageContext.request.contextPath}/site_images/login.jpg" class="img-fluid" alt="login" id="banner">
     </div>
 
    
