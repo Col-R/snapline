@@ -36,9 +36,18 @@ public class EditController {
 	public String edit(@Valid @ModelAttribute("user")User user, BindingResult result, @PathVariable("id")Long id, Model viewModel) {
 		if (result.hasErrors()) {
 			viewModel.addAttribute("user", this.uService.getOneUser(id));
+			System.out.println(result);
 			return "editUser.jsp";
+			
 		}
 		this.uService.editUser(user);
 		return "redirect:/home";
 	}	
 }
+// ignore validations
+// make custom validations ++
+// write method in user class, EditValidator()
+
+// make obj in above with username, first, last. Init as "0", check if(username.length()< 3) 
+// return UserVal
+// add var for validations = 0. Add to it, if var > 0, flash error.
