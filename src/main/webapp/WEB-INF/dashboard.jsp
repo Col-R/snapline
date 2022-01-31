@@ -53,7 +53,8 @@
 
             <div class="feed-header">
                 <div class ="profile-img" >
-                    <img src="${pageContext.request.contextPath}/images#2/test.png">
+                <!-- Profile img not working -->
+                    <img src="${pageContext.request.contextPath}/images#2/person-fill-1.svg">
                 </div>
                 <div class="user">
                     <c:out value="${user.username}"></c:out>
