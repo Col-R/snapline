@@ -19,19 +19,20 @@
 <body>
 
 <div class = "container">
-	<div class="row"> <!-- row 1 navbar start-->
-	    <nav class="navbar topnav">
-	        <div class="container-fluid">
-	            <div>
-	                <img src="https://placekitten.com/100/100" alt="site logo" id="logo">
-	                <span id="brand" class="navbar-brand">snapline.</span>
-	            </div>
-	            <a href="/home">Home</a>
-                <a href="/home/new">Upload a Snap</a>
-                <a href="/logout">Log Out</a>
-	        </div>
-	    </nav>
-	</div> <!-- end row 1 navbar end-->
+        <div class="row"> <!-- row 1 navbar start-->
+            <nav class="navbar topnav">
+                <div class="container-fluid">
+                    <div>
+                        <img src="https://img.icons8.com/ios/50/000000/apple-camera.png" alt="site logo" id="logo">
+                        <span id="brand" class="navbar-brand">snapline</span>
+                    </div>
+                    <a href="/home">Home</a>
+                    <a href="/home/new">Upload a Snap</a>
+                    <a href="/edit/${user.id}">Edit Profile</a>
+                    <a href="/logout">Log Out</a>
+                </div>
+            </nav>
+        </div> <!-- end row 1 navbar end-->
 	<div class = "row">
 		<h2>Upload a snap</h2>
 		<form method = "POST" action = "/home/upload" enctype = "multipart/form-data">

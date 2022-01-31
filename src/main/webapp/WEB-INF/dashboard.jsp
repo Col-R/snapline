@@ -27,7 +27,7 @@
             <nav class="navbar topnav">
                 <div class="container-fluid">
                     <div>
-                        <img src="https://placekitten.com/100/100" alt="site logo" id="logo">
+                        <img src="https://img.icons8.com/ios/50/000000/apple-camera.png" alt="site logo" id="logo">
                         <span id="brand" class="navbar-brand">snapline</span>
                     </div>
                     <a href="/home">Home</a>
@@ -53,7 +53,8 @@
 
             <div class="feed-header">
                 <div class ="profile-img" >
-                    <img src="${pageContext.request.contextPath}/images#2/test.png">
+                <!-- Profile img not working -->
+                    <img src="${pageContext.request.contextPath}/images#2/person-fill-1.svg">
                 </div>
                 <div class="user">
                     <c:out value="${user.username}"></c:out>
