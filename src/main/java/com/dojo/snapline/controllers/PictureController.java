@@ -41,13 +41,8 @@ public class PictureController {
 		
 		User user = uService.getOneUser((Long)session.getAttribute("user__id"));
 		viewModel.addAttribute("user", user);
-//		viewModel.addAttribute("allUsers", this.uService.getAllUsers());
 		
-		
-		List<User> users = uService.getAllUsers();
-		viewModel.addAttribute("users", users);
-		
-		viewModel.addAttribute("pictures", this.pService.userPictures(user));
+		viewModel.addAttribute("pictures", this.pService.allPictures());
 		
 		
 		return "dashboard.jsp";

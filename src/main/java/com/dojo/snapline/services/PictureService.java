@@ -18,7 +18,11 @@ public class PictureService {
 		Picture newPic = new Picture (url, desc, user);
 		this.pRepo.save(newPic);
 	}
-	public List<Picture> userPictures (User user){
-		return this.pRepo.findAllByUser(user);
+//	public List<Picture> userPictures (User user){
+//		return this.pRepo.findAllByUser(user);
+//	}
+	
+	public List<Picture> allPictures(){
+		return (List<Picture>) this.pRepo.findAll();
 	}
 }
