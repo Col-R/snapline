@@ -36,7 +36,8 @@
         </div> <!-- end row 1 navbar end-->
         <div class="row">
         
-            <form:form method="POST" action="/edit/${user.id}" modelAttribute="user">
+            <form:form action="/edit/${user.id}" method="POST" modelAttribute="user">
+            
                 <div class="col-6">
                     <div class="form-group mb-3">
                         <form:label path="firstName">First Name</form:label>
@@ -62,8 +63,9 @@
                     </div>
                 </div><!-- col from line 50 end -->
 
-<input type="submit" value="Save Changes" class="submitButton">
+				<input type="submit" value="Save Changes" class="submitButton"/>
             </form:form>
+            
         </div>
     </div>
 </body>
