@@ -12,7 +12,7 @@ Ash Gray: #B2BEB5
 * {
 	font-family: 'M PLUS 1p', sans-serif;
     padding: 0px;
-    margin: auto 0px;
+    margin: 0 auto;
     text-decoration: none !important;
 }
 body {
@@ -78,7 +78,7 @@ body {
     color: #FFFF;
 }
 a:hover {
-    color: #398564;
+    color: #B2BEB5;
   }
 #brand {
     font-weight: bold;
@@ -89,3 +89,4 @@ a:hover {
     padding: none;
     
 }
+

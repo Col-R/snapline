@@ -18,11 +18,8 @@
 
 <title>SnapLine</title>
 </head>
-
-
 <body>
-
-<div class = "container">
+    <div class="container">
         <div class="row"> <!-- row 1 navbar start-->
             <nav class="navbar topnav">
                 <div class="container-fluid">
@@ -32,47 +29,44 @@
                     </div>
                     <a href="/home">Home</a>
                     <a href="/home/new">Upload a Snap</a>
-                    <%-- <a href="/edit/${user.id}">Edit Profile</a> --%>
+                    <a href="/edit/${user.id}">Edit Profile</a>
                     <a href="/logout">Log Out</a>
                 </div>
             </nav>
         </div> <!-- end row 1 navbar end-->
+        <div class="row">
         
-	<div class = "row"> <!--  row 2 -->
-	<h1>Dashboard</h1>
-		<ul>
-			<li>Logged in username: <c:out value="${user.username}"></c:out>
-		</ul>
-	</div> <!--  end row 2 -->
-</div> <!--  end container row -->
-<%-- THIS BEGINS THE FEED SECTION --%>
-    <div class="feed-cont">
-
-        <c:forEach items="${pictures}" var="myPictures">
-        <div class="feed">
-
-            <div class="feed-header">
-                <div class ="profile-img" >
-                <!-- Profile img not working -->
-                <%-- <img src="${pageContext.request.contextPath}/site_images/login.jpg" class="img-fluid" alt="login" id="banner"> --%>
-                    <img class="person" src="${pageContext.request.contextPath}/site_images/person3.png" height="30">
+            <form:form action="/edit/${user.id}" method="POST" modelAttribute="user">
+            
+                <div class="col-6">
+                    <div class="form-group mb-3">
+                        <form:label path="firstName">First Name</form:label>
+                        <form:errors path="firstName" />
+                        <form:input class="form-control" path="firstName" />
+                    </div>
                 </div>
-                <div class="user">
-                    <c:out value="${myPictures.user.username}"></c:out>
+
+                <div class="col-6">
+                    <div class="form-group">
+                        <form:label path="lastName">Last Name</form:label>
+                        <form:errors path="lastName" />
+                        <form:input class="form-control" path="lastName" />
+                    </div>
                 </div>
-            </div>
 
-            <%-- THE ACTUAL PICTURE --%>
-            <div class="feed-img">
-                <img src="${myPictures.image_url }" height = "400" width="455px">
-                <p> <c:out value="${user.username}"></c:out>:  ${myPictures.description} </p>
-            </div>
 
+                <div class="col-8">
+                    <div class="form-group mb-3">
+                        <form:label path="username">Username</form:label>
+                        <form:errors path="username" />
+                        <form:input class="form-control" path="username" />
+                    </div>
+                </div><!-- col from line 50 end -->
+
+				<input type="submit" value="Save Changes" class="submitButton"/>
+            </form:form>
+            
         </div>
-        </c:forEach>
-
-
     </div>
-
 </body>
 </html>
